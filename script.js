@@ -17,4 +17,11 @@ const generatePositions = (currentPos) => {
     [1, -2],
     [-1, -2],
   ];
+
+  const positions = offsets.map((offset) => {
+    if (check(x + offset[0], y + offset[1]))
+      return [x + offset[0], y + offset[1]];
+  });
+
+  return positions;
 };
