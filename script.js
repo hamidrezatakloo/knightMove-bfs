@@ -33,10 +33,13 @@ const bfs = (root, goal) => {
   while (queue.length) {
     let v = queue.shift();
 
+    if (v.toString() === goal.toString()) return true;
+
     generatePositions(v).forEach((pos) => {
       if (pos) {
         queue.push(pos);
       }
     });
   }
+  return false;
 };
