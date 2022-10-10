@@ -25,3 +25,5 @@ const generatePositions = (currentPos) => {
 
   return positions;
 };
+
+const bfs = (root, goal) => {};
