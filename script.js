@@ -6,4 +6,15 @@ const generatePositions = (currentPos) => {
     if (x > 7 || x < 0 || y > 7 || y < 0) return false;
     return true;
   };
+
+  const offsets = [
+    [2, 1],
+    [2, -1],
+    [-2, 1],
+    [-2, -1],
+    [1, 2],
+    [-1, 2],
+    [1, -2],
+    [-1, -2],
+  ];
 };
