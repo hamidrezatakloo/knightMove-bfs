@@ -30,6 +30,9 @@ const bfs = (root, goal) => {
   const queue = [];
   queue.push(root);
 
+  const predecessors = [];
+  predecessors[root] = null;
+
   while (queue.length) {
     let v = queue.shift();
 
@@ -38,6 +41,7 @@ const bfs = (root, goal) => {
     generatePositions(v).forEach((pos) => {
       if (pos) {
         queue.push(pos);
+        predecessors[pos] = v;
       }
     });
   }
