@@ -26,4 +26,7 @@ const generatePositions = (currentPos) => {
   return positions;
 };
 
-const bfs = (root, goal) => {};
+const bfs = (root, goal) => {
+  const queue = [];
+  queue.push(root);
+};
