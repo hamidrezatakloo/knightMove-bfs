@@ -33,10 +33,28 @@ const bfs = (root, goal) => {
   const predecessors = [];
   predecessors[root] = null;
 
+  const buildPath = () => {
+    const stack = [];
+    stack.push(goal);
+
+    let u = predecessors[goal];
+
+    while (u.toString() != root.toString()) {
+      stack.push(u);
+      u = predecessors[u];
+    }
+
+    stack.push(root);
+
+    let path = stack.reverse();
+
+    return path;
+  };
+
   while (queue.length) {
     let v = queue.shift();
 
-    if (v.toString() === goal.toString()) return true;
+    if (v.toString() === goal.toString()) return buildPath();
 
     generatePositions(v).forEach((pos) => {
       if (pos) {
