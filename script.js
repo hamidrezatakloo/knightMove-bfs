@@ -65,3 +65,5 @@ const bfs = (root, goal) => {
   }
   return false;
 };
+
+export default bfs;
