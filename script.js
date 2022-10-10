@@ -29,4 +29,8 @@ const generatePositions = (currentPos) => {
 const bfs = (root, goal) => {
   const queue = [];
   queue.push(root);
+
+  while (queue.length) {
+    let v = queue.shift();
+  }
 };
