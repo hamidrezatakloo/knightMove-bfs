@@ -1,3 +1,4 @@
+![KnightMove](knightMove-bfs.png)
 # Knight move
 ### find shortest path to goal in 8*8 chess board with bfs
 
